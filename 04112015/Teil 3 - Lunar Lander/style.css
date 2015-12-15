@@ -1,0 +1,35 @@
+body {
+	background: #333333;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#lander {
+	position: absolute;
+	width: 20px;
+	height: 70px;
+	background-color: white;
+	border: 2px solid black;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+}
+
+#ground {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 40px;
+	background-color: #777766;
+}
+
+#platform {
+	position: absolute;
+	background-color: #559955;
+	right: 40px;
+	bottom: 40px; /* oh, nice, the height of #ground! */
+	width: 200px;
+	height: 20px;
+}

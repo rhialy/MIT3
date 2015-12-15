@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>Aufgabe04</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); overflow: auto; background-color: rgb(40, 44, 52); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: normal; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: ' '; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+
+pre.editor-colors,
+.host {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #abb2bf;
+}
+.comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.entity.name.type {
+  color: #e5c07b;
+}
+.entity.other.inherited-class {
+  color: #98c379;
+}
+.keyword {
+  color: #c678dd;
+}
+.keyword.control {
+  color: #c678dd;
+}
+.keyword.operator {
+  color: #abb2bf;
+}
+.keyword.other.special-method {
+  color: #61afef;
+}
+.keyword.other.unit {
+  color: #d19a66;
+}
+.storage {
+  color: #c678dd;
+}
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #c678dd;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #abb2bf;
+}
+.constant {
+  color: #d19a66;
+}
+.constant.variable {
+  color: #d19a66;
+}
+.constant.character.escape {
+  color: #56b6c2;
+}
+.constant.numeric {
+  color: #d19a66;
+}
+.constant.other.color {
+  color: #56b6c2;
+}
+.constant.other.symbol {
+  color: #56b6c2;
+}
+.variable {
+  color: #e06c75;
+}
+.variable.interpolation {
+  color: #be5046;
+}
+.variable.parameter {
+  color: #abb2bf;
+}
+.string {
+  color: #98c379;
+}
+.string.regexp {
+  color: #56b6c2;
+}
+.string.regexp .source.ruby.embedded {
+  color: #e5c07b;
+}
+.string.other.link {
+  color: #e06c75;
+}
+.punctuation.definition.comment {
+  color: #5c6370;
+}
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
+.punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
+.punctuation.definition.array {
+  color: #abb2bf;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #61afef;
+}
+.punctuation.definition.bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #be5046;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #abb2bf;
+}
+.support.class {
+  color: #e5c07b;
+}
+.support.type {
+  color: #56b6c2;
+}
+.support.function {
+  color: #56b6c2;
+}
+.support.function.any-method {
+  color: #61afef;
+}
+.entity.name.function {
+  color: #61afef;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #e5c07b;
+}
+.entity.name.section {
+  color: #61afef;
+}
+.entity.name.tag {
+  color: #e06c75;
+}
+.entity.other.attribute-name {
+  color: #d19a66;
+}
+.entity.other.attribute-name.id {
+  color: #61afef;
+}
+.meta.class {
+  color: #e5c07b;
+}
+.meta.class.body {
+  color: #abb2bf;
+}
+.meta.method-call,
+.meta.method {
+  color: #abb2bf;
+}
+.meta.definition.variable {
+  color: #e06c75;
+}
+.meta.link {
+  color: #d19a66;
+}
+.meta.require {
+  color: #61afef;
+}
+.meta.selector {
+  color: #c678dd;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.meta.tag {
+  color: #abb2bf;
+}
+.none {
+  color: #abb2bf;
+}
+.invalid.deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.invalid.illegal {
+  color: #ffffff !important;
+  background-color: #e05252 !important;
+}
+.markup.bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #c678dd;
+}
+.markup.deleted {
+  color: #e06c75;
+}
+.markup.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #61afef;
+}
+.markup.inserted {
+  color: #98c379;
+}
+.markup.list {
+  color: #e06c75;
+}
+.markup.quote {
+  color: #d19a66;
+}
+.markup.raw {
+  color: #98c379;
+}
+.source.cs .keyword.operator {
+  color: #c678dd;
+}
+.source.css .property-name,
+.source.css .property-value {
+  color: #828997;
+}
+.source.css .property-name.support,
+.source.css .property-value.support {
+  color: #abb2bf;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .markup.heading {
+  color: #e06c75;
+}
+.source.gfm .markup.link {
+  color: #c678dd;
+}
+.source.gfm .link .entity {
+  color: #61afef;
+}
+.source.ini .keyword.other.definition.ini {
+  color: #e06c75;
+}
+.source.java .storage.modifier.import {
+  color: #e5c07b;
+}
+.source.java .storage.type {
+  color: #e5c07b;
+}
+.source.java-properties .meta.key-pair {
+  color: #e06c75;
+}
+.source.java-properties .meta.key-pair > .punctuation {
+  color: #abb2bf;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #98c379;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #56b6c2;
+}
+.source.ruby .constant.other.symbol > .punctuation {
+  color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #c678dd;
+}
+.source.python .variable.parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h1 id="datenbanken">Datenbanken</h1>
+<h2 id="abgaben">Abgaben</h2>
+<p>Dieses Praktikum führt unter Anderem die Themen der letzten drei Praktika zusammen. Sie haben hierfür ein erweitertes Zeitfenster bis zum <strong>15.12.2015 23:55 Uhr</strong>. Der Termin liegt absichtlich nach der Klausur und Konzept-Präsentation. Dennoch eignet sich diese Aufgabe auch als Klausur-Vorbereitung.</p>
+<p>Bitte laden Sie eine Zip-Datei hoch. Sie dürfen die <code style="font-family: Hack;">node_modules</code>-Ordner gerne vorher löschen wenn sie Platz sparen möchten. Auch die Vorgegebene <code style="font-family: Hack;">Musik.db</code> kann gespart werden.</p>
+<h2 id="zielsetzung">Zielsetzung</h2>
+<p>Mit diesem Praktikum möchten wir Ihnen den Umgang mit Datenbanken näher bringen. Wir tun das mit SQLite, was ein Vertreter der SQL-Datenbanken ist. Diese Aufgaben lassen sich mit minimalen Änderungen auf MySQL oder PostgreSQL übertragen.</p>
+<h2 id="voraussetzungen">Voraussetzungen</h2>
+<ul>
+<li>Zu dieser Aufgabenstellung gehört eine Zip-Datei <code style="font-family: Hack;">Aufgabe04.zip</code>.</li>
+<li>Zu dieser Aufgabenstellung wird am 2.12. eine weitere Zip-Datei <code style="font-family: Hack;">Aufgabe04.5.zip</code> bereit gestellt.</li>
+<li>Bitte installieren Sie das Programm <a href="http://sqlitebrowser.org/">SQLite Database Browser</a>.</li>
+<li>Außerdem benötigen Sie - wie in der letzten Übung - <a href="https://nodejs.org/en/">node.js</a>.</li>
+</ul>
+<h2 id="spickzettel">Spickzettel</h2>
+<p>Praktische Terminal-Befehle:</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="source shell"><span>dir&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;WINDOWS!&nbsp;Listet&nbsp;auf,&nbsp;was&nbsp;im&nbsp;aktuellen&nbsp;Verzeichnis&nbsp;ist.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span>ls&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;Mac&nbsp;OS&nbsp;/&nbsp;Linux!&nbsp;Listet&nbsp;auf,&nbsp;was&nbsp;im&nbsp;aktuellen&nbsp;Verzeichnis&nbsp;ist.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span class="support function builtin shell"><span>cd</span></span><span>&nbsp;</span><span class="keyword operator redirect shell"><span>&lt;</span></span><span>Ordnername</span><span class="keyword operator redirect shell"><span>&gt;</span></span><span>&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;Wechselt&nbsp;in&nbsp;ein&nbsp;Verzeichnis&nbsp;hinein</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span class="support function builtin shell"><span>cd</span></span><span>&nbsp;..&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;wechselt&nbsp;aus&nbsp;einem&nbsp;Verzeichnis&nbsp;heraus</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span>mkdir&nbsp;</span><span class="keyword operator redirect shell"><span>&lt;</span></span><span>Ordnername</span><span class="keyword operator redirect shell"><span>&gt;</span></span><span>&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;einen&nbsp;Ordner&nbsp;erzeugen</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span>&nbsp;</span></span></div><div class="line"><span class="source shell"><span>node&nbsp;</span><span class="keyword operator redirect shell"><span>&lt;</span></span><span>Dateiname</span><span class="keyword operator redirect shell"><span>&gt;</span></span><span>&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;ein&nbsp;Script&nbsp;mit&nbsp;Node&nbsp;ausführen</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span>npm&nbsp;install&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;Alle&nbsp;Dependencies&nbsp;aus&nbsp;package.json&nbsp;installieren</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span>npm&nbsp;install&nbsp;--save&nbsp;</span><span class="keyword operator redirect shell"><span>&lt;</span></span><span>Paket-Name</span><span class="keyword operator redirect shell"><span>&gt;</span></span><span>&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;Ein&nbsp;neues&nbsp;Paket&nbsp;installieren&nbsp;und&nbsp;in&nbsp;der&nbsp;package.json&nbsp;eintragen</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span class="meta scope logical-expression shell"><span class="punctuation definition logical-expression shell"><span>[</span></span><span>Ctrl+C</span><span class="punctuation definition logical-expression shell"><span>]</span></span></span><span>&nbsp;&nbsp;</span><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;Beendet&nbsp;laufende&nbsp;Scripte</span><span>&nbsp;</span></span></span></div></pre>
+<p>JavaScript in Node.js</p>
+<pre class="editor-colors lang-javascript"><div class="line"><span class="source js"><span class="storage modifier js"><span>var</span></span><span>&nbsp;bernd&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="support function js"><span>require</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>bernd</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span><span>&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;ein&nbsp;Modul&nbsp;aus&nbsp;NPM&nbsp;laden</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span class="storage modifier js"><span>var</span></span><span>&nbsp;klaus&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="support function js"><span>require</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>./klaus</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span><span>&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;ein&nbsp;eigenes&nbsp;JavaScript&nbsp;Modul&nbsp;laden</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="support variable js"><span>module</span></span><span class="meta delimiter method period js"><span>.</span></span><span>exports&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="keyword operator js"><span>&lt;</span></span><span>whatever</span><span class="keyword operator js"><span>&gt;</span></span><span class="punctuation terminator statement js"><span>;</span></span><span>&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;wie&nbsp;man&nbsp;in&nbsp;eigenen&nbsp;Modulen&nbsp;den&nbsp;&quot;öffentlichen&quot;&nbsp;Teil&nbsp;definiert</span><span>&nbsp;</span></span></span></div></pre>
+<h2 id="teil-1-einfache-selects">Teil 1: Einfache Selects</h2>
+<p>Öffnen Sie die beigelegte Datenbank-Datei &quot;Musik.db&quot; mit dem SQLite Database Browser.</p>
+<p>Im letzten Tab &quot;SQL Ausführen&quot; können Sie freie Kommandos eingeben und mit dem <em>play</em> Button oder <kbd>Ctrl</kbd> + <kbd>Return</kbd> bzw. <kbd>CMD</kbd> + <kbd>Return</kbd> ausführen. Bitte probieren Sie jedes Beispiel einmal im SQLite-Browser aus. Sie anschließend gerne mit den Kommandos experimentieren.</p>
+<p>Die SQL-Kommentare erläutern die jeweiligen Queries. Bitte lesen Sie sie.</p>
+<p>Zwischen den Befehlen sind Aufgaben kenntlich gemacht. Bitte sammeln Sie ihre selbst gebauten SQL-Abfragen in einer einfachen Textdatei und geben sie mit ab.</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Zwei&nbsp;Bindestriche&nbsp;beginnen&nbsp;einen&nbsp;Kommentar!</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;So&nbsp;wie&nbsp;Sie&nbsp;es&nbsp;aus&nbsp;JavaScript&nbsp;mit&nbsp;//&nbsp;kennen.</span><span>&nbsp;</span></span></span></div></pre>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Alle&nbsp;Zeilen,&nbsp;alle&nbsp;Spalten&nbsp;aus&nbsp;der&nbsp;Tabelle&nbsp;&quot;songs&quot;:</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs;</span></span></div></pre>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Manchmal&nbsp;braucht&nbsp;man&nbsp;nicht&nbsp;alle&nbsp;Informationen</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;So&nbsp;kann&nbsp;man&nbsp;sich&nbsp;auf&nbsp;ein&nbsp;paar&nbsp;Spalten&nbsp;begrenzen:</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;artist,&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs;</span></span></div></pre>
+<p><strong>Aufgabe:</strong> geben Sie zusätzlich zu <code style="font-family: Hack;">artist</code> und <code style="font-family: Hack;">title</code> noch das Jahr mit aus.</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Alle&nbsp;Songs,&nbsp;sortiert&nbsp;nach&nbsp;Interpret</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>ORDER&nbsp;BY</span></span><span>&nbsp;artist;</span></span></div></pre>
+<p><strong>Aufgabe:</strong> sortieren Sie die Daten nach anderen Kriterien, zum Beispiel nach der Lied-Länge. Was sind die kürzesten drei Lieder?</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Eine&nbsp;ganz&nbsp;bestimme&nbsp;Zeile</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;das&nbsp;ist&nbsp;ein&nbsp;extrem&nbsp;häufiger&nbsp;Fall!&nbsp;Das&nbsp;brauchen&nbsp;Sie&nbsp;ständig:</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;ID&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>44054</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;ACHTUNG!&nbsp;In&nbsp;SQL&nbsp;braucht&nbsp;man&nbsp;nur&nbsp;ein&nbsp;&quot;=&quot;&nbsp;für&nbsp;einen&nbsp;Vergleich!</span><span>&nbsp;</span></span></span></div></pre>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Welche&nbsp;Lieder&nbsp;sind&nbsp;länger&nbsp;als&nbsp;10&nbsp;Minuten?&nbsp;(600s)</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;song_length&nbsp;</span><span class="keyword operator comparison sql"><span>&gt;</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>600</span></span><span>;</span></span></div></pre>
+<p><strong>Aufgabe:</strong> finden Sie Dateien, die kleiner sind als 500.000 Bytes. Die Dateigröße steht im Feld <code style="font-family: Hack;">file_length</code>.</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Bedingungen&nbsp;kann&nbsp;man&nbsp;auch&nbsp;kombinieren:</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;song_length&nbsp;</span><span class="keyword operator comparison sql"><span>&gt;</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>600</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;year&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>1997</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Dies&nbsp;gibt&nbsp;nur&nbsp;Zeilen&nbsp;aus,&nbsp;für&nbsp;die&nbsp;BEIDE&nbsp;Bedingungen&nbsp;erfüllt&nbsp;sind.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;title&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="string quoted double sql"><span class="punctuation definition string begin sql"><span>&quot;</span></span><span>Tonight&quot;</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;8&nbsp;Ergebnisse</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>where</span></span><span>&nbsp;title&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>Tonight&#39;</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;artist&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="string quoted double sql"><span class="punctuation definition string begin sql"><span>&quot;</span></span><span>The&nbsp;Bates&quot;</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;1&nbsp;Ergebnis</span><span>&nbsp;</span></span></span></div></pre>
+<p><strong>Aufgabe:</strong> Schreiben Sie eine Abfrage, die das Lied &quot;Hello&quot; von &quot;Sugarbomb&quot; findet.</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Die&nbsp;Spalten&nbsp;können&nbsp;in&nbsp;der&nbsp;Abfrage&nbsp;&quot;umbenannt&quot;&nbsp;werden:</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;artist&nbsp;</span><span class="keyword other alias sql"><span>AS</span></span><span>&nbsp;Künstler,&nbsp;title&nbsp;</span><span class="keyword other alias sql"><span>AS</span></span><span>&nbsp;Lied&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs;</span></span></div></pre>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;LIKE&nbsp;kann&nbsp;für&nbsp;eine&nbsp;ungenaue&nbsp;Suche&nbsp;auf&nbsp;Text&nbsp;genutzt&nbsp;werden.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Die&nbsp;Prozent-Zeichen&nbsp;sind&nbsp;&quot;Wildcards&quot;.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;In&nbsp;wie&nbsp;welchen&nbsp;Lied-Titeln&nbsp;kommt&nbsp;&quot;love&quot;&nbsp;vor?</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%love%&#39;</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Wie&nbsp;viele&nbsp;Titel&nbsp;enden&nbsp;auf&nbsp;&quot;Fire&quot;</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%fire&#39;</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Wie&nbsp;viele&nbsp;Titel&nbsp;beginnen&nbsp;mit&nbsp;&quot;Fire&quot;</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>fire%&#39;</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Lieder,&nbsp;die&nbsp;&quot;the&quot;&nbsp;enthalten,&nbsp;aber&nbsp;nicht&nbsp;mit&nbsp;&quot;the&quot;&nbsp;beginnen</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%the%&#39;</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;title&nbsp;NOT&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>the%&#39;</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Lieder,&nbsp;die&nbsp;&quot;need&quot;&nbsp;enthalten,&nbsp;aber&nbsp;weder&nbsp;&quot;love&quot;&nbsp;noch&nbsp;&quot;you&quot;.&nbsp;Da&nbsp;wird&#39;s&nbsp;echt&nbsp;dünn!</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%need%&#39;</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;title&nbsp;NOT&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%love%&#39;</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;title&nbsp;NOT&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%you%&#39;</span></span><span>;</span></span></div></pre>
+<p><strong>Aufgabe:</strong> Schreiben Sie eine Abfrage, die nach einem Wort Ihrer Wahl sucht.</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Es&nbsp;gibt&nbsp;natürlich&nbsp;auch&nbsp;einen&nbsp;OR-Operator:</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;artist,&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%love%&#39;</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>OR</span></span><span>&nbsp;title&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%heart%&#39;</span></span><span>;</span></span></div></pre>
+<h3 id="select-mit-funktionen-in-der-abfrage">SELECT mit Funktionen in der Abfrage</h3>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Finden&nbsp;Sie&nbsp;heraus,&nbsp;aus&nbsp;welchen&nbsp;Dateiformaten&nbsp;die&nbsp;Musiksammlung&nbsp;besteht</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;count()&nbsp;kann&nbsp;Zeilen&nbsp;zählen,&nbsp;In&nbsp;Verbindung&nbsp;mit&nbsp;GROUP&nbsp;BY&nbsp;sehr&nbsp;praktisch!</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;extension,&nbsp;</span><span class="support function aggregate sql"><span>count</span></span><span>()&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>GROUP&nbsp;BY</span></span><span>&nbsp;extension;</span></span></div></pre>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Welcher&nbsp;Künstler&nbsp;ist&nbsp;am&nbsp;stärksten&nbsp;vertreten?</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;sum(&lt;Feldname&gt;)&nbsp;kann&nbsp;numerische&nbsp;Felder&nbsp;schon&nbsp;bei&nbsp;der&nbsp;Abfrage&nbsp;aufsummieren.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;artist,</span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="support function aggregate sql"><span>count</span></span><span>()&nbsp;</span><span class="keyword other alias sql"><span>as</span></span><span>&nbsp;tracks,&nbsp;</span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="support function aggregate sql"><span>sum</span></span><span>(song_length)&nbsp;</span><span class="keyword other alias sql"><span>as</span></span><span>&nbsp;length</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>FROM</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;songs</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>GROUP&nbsp;BY</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;artist</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>ORDER&nbsp;BY</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;length&nbsp;</span><span class="keyword other order sql"><span>desc</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Kommandos&nbsp;dürfen&nbsp;auch&nbsp;über&nbsp;mehrere&nbsp;Zeilen&nbsp;gehen!&nbsp;Das&nbsp;kann&nbsp;bei&nbsp;komplexen</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Kommandos&nbsp;die&nbsp;Übersicht&nbsp;erhöhen.</span><span>&nbsp;</span></span></span></div></pre>
+<p><strong>Aufgabe:</strong> Mit einer fast identischen Abfrage können Sie auch die durchschnittliche (Englisch: <em>average</em>) Länge vergleichen! Eine Übersicht der möglichen Funktionen finden Sie auf der <a href="https://www.sqlite.org/lang_aggfunc.html">SQL Aggregate Function Seite</a>.</p>
+<h2 id="teil-2-komplexere-selects-und-weitere-befehle">Teil 2: Komplexere SELECTs und weitere Befehle</h2>
+<p>Öffnen Sie wieder die beigelegte Datenbank-Datei &quot;Musik.db&quot; mit dem SQLite Database Browser.</p>
+<p>Zwischen den Befehlen sind Aufgaben kenntlich gemacht. Sie können Ihre angepassten Kommandos gerne zu Ihren Ergebnissen aus Teil 1 schreiben.</p>
+<h3 id="selects-ber-mehrere-tabellen">Selects über mehrere Tabellen</h3>
+<p>Die Folgende Abfrage liefert großen Quatsch, wir führen sie dennoch aus:</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Sie&nbsp;können&nbsp;Daten&nbsp;aus&nbsp;mehreren&nbsp;Tabellen&nbsp;gleichzeitig&nbsp;abfragen:</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;albums,&nbsp;songs;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;19.485.437&nbsp;Rows&nbsp;returned&nbsp;(took&nbsp;663ms)&nbsp;&lt;--&nbsp;!!!!!&nbsp;19.&nbsp;Millionen.&nbsp;Zeilen.</span><span>&nbsp;</span></span></span></div></pre>
+<p>Wenn man mehrere Tabellen kombiniert, liefert SQL das &quot;kartesische Produkt&quot; zurück. Das sind alle Zeilen der einen Tabelle kombiniert mit allen Zeilen der anderen Tabelle. Man <strong>muss</strong> Filtern, um sinnvolle Daten zu erhalten:</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;aus&nbsp;dem&nbsp;(unsinnigen)&nbsp;kartesischen&nbsp;Produkt&nbsp;wählen&nbsp;wir&nbsp;nur&nbsp;die&nbsp;Zeilen,&nbsp;in&nbsp;der&nbsp;Album&nbsp;ID&nbsp;der&nbsp;beiden&nbsp;Tabellen&nbsp;überein&nbsp;stimmt</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;albums,&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>albums</span></span><span>.</span><span class="constant other table-name sql"><span>ID</span></span><span>&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>songs</span></span><span>.</span><span class="constant other table-name sql"><span>album_id</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;14.063&nbsp;Rows&nbsp;returned&nbsp;(took&nbsp;70ms)</span><span>&nbsp;</span></span></span></div></pre>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;auch&nbsp;in&nbsp;kombinierten&nbsp;Abfragen&nbsp;kann&nbsp;man&nbsp;sich&nbsp;auf&nbsp;bestimmte&nbsp;Spalten&nbsp;beschränken.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Wenn&nbsp;der&nbsp;Spaltenname&nbsp;mehrdeutig&nbsp;ist,&nbsp;muss&nbsp;man&nbsp;den&nbsp;Tabellennamen&nbsp;voranstellen&nbsp;(siehe&nbsp;&quot;artist&quot;)</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;album,</span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="constant other database-name sql"><span>songs</span></span><span>.</span><span class="constant other table-name sql"><span>artist</span></span><span>,&nbsp;</span><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;artist&nbsp;kommt&nbsp;doppelt&nbsp;vor,&nbsp;wir&nbsp;möchten&nbsp;den&nbsp;aus&nbsp;der&nbsp;SONGS-Tabelle.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;title</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>FROM</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;albums,</span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;songs</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>WHERE</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="constant other database-name sql"><span>albums</span></span><span>.</span><span class="constant other table-name sql"><span>ID</span></span><span>&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>songs</span></span><span>.</span><span class="constant other table-name sql"><span>album_id</span></span><span>;</span></span></div></pre>
+<p>Wie im einfachen <code style="font-family: Hack;">SELECT</code> kann man auch hier noch mehr Bedingungen anfügen:</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;album,&nbsp;</span><span class="constant other database-name sql"><span>songs</span></span><span>.</span><span class="constant other table-name sql"><span>artist</span></span><span>,&nbsp;title</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>FROM</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;albums,&nbsp;songs</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>albums</span></span><span>.</span><span class="constant other table-name sql"><span>ID</span></span><span>&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>songs</span></span><span>.</span><span class="constant other table-name sql"><span>album_id</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;album&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted double sql"><span class="punctuation definition string begin sql"><span>&quot;</span></span><span>%hits%&quot;</span></span><span>;&nbsp;</span><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;NEU:&nbsp;wir&nbsp;filtern&nbsp;zusätzlich&nbsp;nach&nbsp;Albumname</span><span>&nbsp;</span></span></span></div></pre>
+<p><strong>Aufgabe:</strong> Verändern Sie die Abfrage so, dass Alben mit &quot;live&quot; im album-Namen gefunden werden.</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Selects&nbsp;können&nbsp;auch&nbsp;über&nbsp;noch&nbsp;mehr&nbsp;Tabellen&nbsp;hinweg&nbsp;laufen:</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;genres_songs,&nbsp;genres,&nbsp;songs</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>genres_songs</span></span><span>.</span><span class="constant other table-name sql"><span>genre_id</span></span><span>&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>genres</span></span><span>.</span><span class="constant other table-name sql"><span>ID</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>genres_songs</span></span><span>.</span><span class="constant other table-name sql"><span>song_id</span></span><span>&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>songs</span></span><span>.</span><span class="constant other table-name sql"><span>ID</span></span><span>;</span></span></div></pre>
+<p>Aus dem letzten Beispiel können wir das Genre eines Lieds ablesen, obwohl es zwei Tabellen entfernt gespeichert ist. <code style="font-family: Hack;">genres_songs</code> ist ein sogenannter &quot;Join-Table&quot;.</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;und&nbsp;nochmal&nbsp;mit&nbsp;viel&nbsp;mehr&nbsp;Bedingungen</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;genres_songs,&nbsp;genres,&nbsp;songs</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>genres_songs</span></span><span>.</span><span class="constant other table-name sql"><span>genre_id</span></span><span>&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>genres</span></span><span>.</span><span class="constant other table-name sql"><span>ID</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>genres_songs</span></span><span>.</span><span class="constant other table-name sql"><span>song_id</span></span><span>&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>songs</span></span><span>.</span><span class="constant other table-name sql"><span>ID</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>genres</span></span><span>.</span><span class="constant other table-name sql"><span>genre_name</span></span><span>&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>Soundtrack&#39;</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;&nbsp;</span><span class="keyword other DML sql"><span>AND</span></span><span>&nbsp;</span><span class="constant other database-name sql"><span>songs</span></span><span>.</span><span class="constant other table-name sql"><span>title</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>%Apollo%&#39;</span></span><span>;</span></span></div></pre>
+<p><strong>Aufgabe:</strong> Lassen Sie alle Lieder im Genre &quot;Brit Rock&quot; ausgeben.</p>
+<h3 id="einf-gen">Einfügen</h3>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Wir&nbsp;fügen&nbsp;eigene&nbsp;Zeilen&nbsp;ein!</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>INSERT&nbsp;INTO</span></span><span>&nbsp;songs&nbsp;(artist,&nbsp;title)&nbsp;</span><span class="keyword other DML II sql"><span>VALUES</span></span><span>&nbsp;(</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>IMD&nbsp;All&nbsp;Stars&#39;</span></span><span>,&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>The&nbsp;Tetris&nbsp;Theme&#39;</span></span><span>);</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>INSERT&nbsp;INTO</span></span><span>&nbsp;songs&nbsp;(artist,&nbsp;title)&nbsp;</span><span class="keyword other DML II sql"><span>VALUES</span></span><span>&nbsp;(</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>IMD&nbsp;All&nbsp;Stars&#39;</span></span><span>,&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>Never&nbsp;gonna&nbsp;give&nbsp;you&nbsp;up!&#39;</span></span><span>);</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Hat&nbsp;das&nbsp;geklappt?&nbsp;schauen&nbsp;wir&nbsp;mal!</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;artist&nbsp;</span><span class="keyword other DML sql"><span>LIKE</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>IMD%&#39;</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;HEUREKA!</span><span>&nbsp;</span></span></span></div></pre>
+<p><strong>Aufgabe:</strong> Fügen Sie zwei weitere eigene Lieder hinzu.</p>
+<p><strong>Aufgabe:</strong> Fügen ein weiteres eigenes Lied hinzu, geben Sie diesem Lied zusätzlich eine Länge.</p>
+<h3 id="-ndern">Ändern</h3>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Wir&nbsp;haben&nbsp;keine&nbsp;Länge&nbsp;angegeben.&nbsp;Machen&nbsp;wir&nbsp;das&nbsp;doch&nbsp;mal!</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>UPDATE</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>SET</span></span><span>&nbsp;song_length&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>100</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;ups</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Schauen&nbsp;Sie&nbsp;sich&nbsp;das&nbsp;Attribut&nbsp;&quot;song_length&quot;&nbsp;an.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;UPS!</span><span>&nbsp;</span></span></span></div></pre>
+<p><strong>Wichtig:</strong> Update läuft erst mal auf <em>alle</em> Zeilen! Auch hier sollte man dringend mit <code style="font-family: Hack;">WHERE</code> eingrenzen!</p>
+<p>Entpacken Sie Musik.db neu aus der Zip-Datei und laden Sie sie neu im SQLite-Browser.</p>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;ID&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>21282</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Song-Length:&nbsp;308</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Diesmal&nbsp;mit&nbsp;Bedingung!</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>UPDATE</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>SET</span></span><span>&nbsp;song_length&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>100</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;ID&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>21282</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;ID&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>21282</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Song-Length:&nbsp;100!</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="keyword operator star sql"><span>*</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Alle&nbsp;Anderen&nbsp;sind&nbsp;unverändert.</span><span>&nbsp;</span></span></span></div></pre>
+<h3 id="l-schen">Löschen</h3>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>DELETE</span></span><span>&nbsp;</span><span class="keyword other DML sql"><span>FROM</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword other DML sql"><span>WHERE</span></span><span>&nbsp;artist&nbsp;</span><span class="keyword operator comparison sql"><span>=</span></span><span>&nbsp;</span><span class="string quoted single sql"><span class="punctuation definition string begin sql"><span>&#39;</span></span><span>Scooter&#39;</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;Ein&nbsp;Kommando&nbsp;für&nbsp;jede&nbsp;Musiksammlung!</span><span>&nbsp;</span></span></span></div></pre>
+<h3 id="weitere-sql-funktionen">Weitere SQL-Funktionen</h3>
+<pre class="editor-colors lang-sql"><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;SQL&nbsp;kann&nbsp;auch&nbsp;verschiedene&nbsp;weitere&nbsp;Dinge&nbsp;intern.&nbsp;Diese&nbsp;Funktionen&nbsp;kann</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="comment line double-dash sql"><span class="punctuation definition comment sql"><span>--</span></span><span>&nbsp;man&nbsp;an&nbsp;jeder&nbsp;Stelle&nbsp;einer&nbsp;Query&nbsp;benutzen,&nbsp;also&nbsp;auch&nbsp;z.B.&nbsp;im&nbsp;WHERE-Teil.</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="constant numeric sql"><span>1000</span></span><span class="keyword operator math sql"><span>/</span></span><span class="constant numeric sql"><span>4</span></span><span>;</span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;DATETIME();</span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;LENGTH(</span><span class="string quoted double sql"><span class="punctuation definition string begin sql"><span>&quot;</span></span><span>Heuwägelchen&quot;</span></span><span>);</span></span></div><div class="line"><span class="source sql"><span>&nbsp;</span></span></div><div class="line"><span class="source sql"><span class="keyword other DML sql"><span>SELECT</span></span><span>&nbsp;</span><span class="support function string sql"><span>UPPER</span></span><span>(</span><span class="string quoted double sql"><span class="punctuation definition string begin sql"><span>&quot;</span></span><span>kleinbuchstaben&quot;</span></span><span>);</span></span></div></pre>
+<h2 id="teil-3-node-und-sql">Teil 3: Node und SQL</h2>
+<p>Diese Aufgaben beziehen sich auf den Ordner <code style="font-family: Hack;">Teil 3 - Node und SQL</code>. </p>
+<p>Führen Sie im Verzeichnis <code style="font-family: Hack;">npm install</code> aus, um die Dependencies zu installieren.</p>
+<p>Diese Aufgaben finden vollständig in Ihrem Terminal bzw. Ihrer Eingabe-Aufforderung statt. Außer node.js und dem sqlite3-Paket gibt es keine Abhängigkeit. In diesem Teil verwenden wir SQLite nicht mehr im SQLite-Browser, sondern direkt aus JavaScript.</p>
+<h3 id="artists-beispiel-mit-fester-query">Artists Beispiel mit fester Query</h3>
+<p>Bitte starten Sie das beigelegte Script mit <code style="font-family: Hack;">node artists.js</code>.</p>
+<p><code style="font-family: Hack;">artists.js</code> Zeigt drei Dinge, die alle in den folgenden Beispielen als bekannt vorausgesetzt werden.</p>
+<ul>
+<li>Einbinden von SQLite3 generell (Zeile 1)</li>
+<li>Grundsätzliche Verbindung zur Datenbank, und wie sie beendet wird (Zeile 3 und 15)</li>
+<li>Eine Abfrage auf der Datenbank mitsamt Callback-Funktion (Zeile 6)</li>
+</ul>
+<p>Neben <code style="font-family: Hack;">all()</code> gibt es noch weitere Methoden, die man auf eine Datenbank aufrufen kann. Ein Blick in die <a href="https://github.com/mapbox/node-sqlite3/wiki/API">SQLite3-API</a> listet weitere Möglichkeiten auf.</p>
+<p><strong>Aufgabe:</strong> tauschen Sie die Abfrage in Zeile 6 gegen ein beliebiges Beispiel aus den vorangegangenen Teilen 1 oder 2.</p>
+<h3 id="artists-beispiel-2-mit-query-bestandteilen-aus-variablen">Artists Beispiel 2 mit Query-Bestandteilen aus Variablen</h3>
+<p>Im Alltag kommen fast immer Benutzer-Eingaben in die Datenbank-Abfragen. Es ist von großer Wichtigkeit, hier korrekt vor zu gehen, da man sich andernfalls sehr leicht die vielleicht gängigste Sicherheitslücke einfängt, die SQL-Injection.</p>
+<p>Bitte bauen Sie sich SQL-Queries <strong>nicht</strong> mit String-Verkettung (Schlecht: <code style="font-family: Hack;">&quot;SELECT * FROM songs WHERE &quot; + boeseBenutzerEingabe + &quot;;&quot;</code>) zusammen. Es gibt hierfür sicherere Wege, die ich Ihnen in diesem Beispiel zeigen möchte.</p>
+<p>Starten Sie <code style="font-family: Hack;">node artists2.js</code></p>
+<p>Gegenüber dem vorherigen Beispiel haben sich nur die Zeilen 5-8 geändert. Besonderes Augenmerk sollten Sie auf Zeile 8 legen. Dort ist im Direktvergleich etwas passiert:</p>
+<pre class="editor-colors lang-javascript"><div class="line"><span class="source js"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;vorher</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>db</span><span class="meta delimiter method period js"><span>.</span></span><span class="support constant js"><span>all</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>SELECT&nbsp;*&nbsp;FROM&nbsp;artists</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span>&nbsp;</span><span class="punctuation definition parameters begin js"><span>(</span></span><span class="variable parameter function js"><span>err</span></span><span class="meta object delimiter js"><span>,</span></span><span>&nbsp;</span><span class="variable parameter function js"><span>rows</span></span><span class="punctuation definition parameters end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span><span>&nbsp;</span><span class="meta delimiter method period js"><span>.</span><span>.</span><span>.</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;nachher</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>db</span><span class="meta delimiter method period js"><span>.</span></span><span class="support constant js"><span>all</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>SELECT&nbsp;*&nbsp;FROM&nbsp;artists&nbsp;WHERE&nbsp;artist&nbsp;=&nbsp;?</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;suchwort</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span>&nbsp;</span><span class="punctuation definition parameters begin js"><span>(</span></span><span class="variable parameter function js"><span>err</span></span><span class="meta object delimiter js"><span>,</span></span><span>&nbsp;</span><span class="variable parameter function js"><span>rows</span></span><span class="punctuation definition parameters end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span><span>&nbsp;</span><span class="meta delimiter method period js"><span>.</span><span>.</span><span>.</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div></pre>
+<p><code style="font-family: Hack;">db.all</code> nimmt Ihnen eine wichtige Aufgabe ab: Wenn Datenbank-Abfragen mit Variablen gefüllt werden müssen (<code style="font-family: Hack;">suchwort</code> in unserem Beispiel), kümmert es sich um Anführungszeichen und ein sicheres Einfügen in die Abfrage.</p>
+<p><strong>Aufgabe:</strong> Verändern Sie die Variable <code style="font-family: Hack;">suchwort</code> in Zeile 5 so, dass uns der Eintrag für &quot;They Might Be Giants&quot; ausgegeben wird.</p>
+<h3 id="song-beispiel-mit-each">Song Beispiel mit each</h3>
+<p>Wir haben in den vorigen Beispielen mit <code style="font-family: Hack;">all()</code> gearbeitet. Es liefert Ihnen ein Array aller Einträge zurück. Das kann bei sehr umfangreichen Abfragen von Nachteil sein. Eine Alternative ist <a href="https://github.com/mapbox/node-sqlite3/wiki/API#databaseeachsql-param--callback-complete"><code style="font-family: Hack;">each()</code></a>. Im Gegensatz zu bisherigen Beispielen nimmt <code style="font-family: Hack;">each()</code> nicht einen sondern <em>zwei</em> callbacks als Parameter. Der erste Callback wird einmal pro Ergebnis-Zeile aufgerufen. Abschließend wird ein zweiter Callback aufgerufen, wenn alles fertig ist.</p>
+<p>Für eine bessere Lesbarkeit haben wir in diesem Beispiel auf Fehlerbehandlung verzichtet.</p>
+<p><strong>Aufgabe:</strong> verändern Sie die Ausgabe in der Konsole so, dass sie etwas menschenlesbarer wird. Das könnte z.B. so aussehen: <code style="font-family: Hack;">- Interpret / Titel (ID: 1234)</code>.</p>
+<p><strong>Aufgabe 2:</strong> lassen Sie zusätzlich das Jahr mit ausgeben.</p>
+<h2 id="teil-4-routing-und-datenbank-in-express-js">Teil 4: Routing und Datenbank in Express.js</h2>
+<p>Diese Aufgaben beziehen sich auf den Ordner <code style="font-family: Hack;">Teil 4 - Express</code>. </p>
+<p>Führen Sie in diesem Verzeichnis <code style="font-family: Hack;">npm install</code> aus, um die Dependencies zu installieren.</p>
+<p>Starten Sie den Webserver:</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>Mac</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span>$&nbsp;DEBUG=myMusicApp:</span><span class="keyword operator glob shell"><span>*</span></span><span>&nbsp;npm&nbsp;start</span></span></div><div class="line"><span class="source shell"><span>&nbsp;</span></span></div><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>Windows</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span class="keyword operator redirect shell"><span>&gt;</span></span><span>&nbsp;</span><span class="support function builtin shell"><span>set</span></span><span>&nbsp;DEBUG=myapp:</span><span class="keyword operator glob shell"><span>*</span></span><span>&nbsp;</span><span class="keyword operator list shell"><span>&amp;</span></span><span>&nbsp;npm&nbsp;start</span></span></div></pre>
+<p>Der Webserver muss bei Code-Änderungen neu gestartet werden!</p>
+<p>Navigieren Sie in Ihrem Browser zu <a href="http://127.0.0.1:3000/artists">http://127.0.0.1:3000/artists</a></p>
+<h3 id="routing-beispiele">Routing Beispiele</h3>
+<p>In <code style="font-family: Hack;">app.js</code> in den Zeilen 25-33 sind zwei einfache Routen definiert. Bitte rufen Sie die <a href="127.0.0.1:3000/karl">diese</a> beiden <a href="127.0.0.1:3000/bernd">Adressen</a> abwechselnd im Browser auf.</p>
+<ul>
+<li>Was erscheint im Browser?</li>
+<li>Was erscheint im Terminal/in der Eingabe-Aufforderung?</li>
+</ul>
+<p>Eine Route besteht im Wesentlichen aus einer URL und einem Callback. Der Callback wird ausgeführt, wenn die Adresse &quot;passt&quot;.</p>
+<p><strong>Aufgabe:</strong> erstellen Sie eine weitere Route direkt in <code style="font-family: Hack;">app.js</code>.</p>
+<p>In den darauf folgenden Zeilen (<code style="font-family: Hack;">app.use(&#39;/&#39;, routes);</code>...) werden weitere Routen definiert.</p>
+<ul>
+<li>Wo kommt die Variable <code style="font-family: Hack;">routes</code> her?</li>
+<li>Wo kommt die Variabe <code style="font-family: Hack;">artists</code> her?</li>
+<li>Was ist in den beiden Dateien definiert?</li>
+<li>Warum schreibt man in <code style="font-family: Hack;">routes/artists.js</code> in Zeile 31 <code style="font-family: Hack;">/songs</code> und ruft aber eine Adresse wie <a href="http://localhost:3000/artists/songs?artist=2212">http://localhost:3000/artists/songs?artist=2212</a> im Browser auf? Wo kommt das zusätzliche <code style="font-family: Hack;">/artists</code> her?</li>
+</ul>
+<h3 id="datenbank">Datenbank</h3>
+<p>Die Website ist ein Beispiel einer Datenbankgestützten express-Website. Unter <code style="font-family: Hack;">/routes/artists.js</code> sind zwei Routen definiert: <code style="font-family: Hack;">/</code> und <code style="font-family: Hack;">/songs</code>, die jeweils Daten aus der Datenbank abrufen und dann mit einem Template darstellen. Express nimmt Ihnen mit <a href="http://expressjs.com/starter/basic-routing.html">Routen</a> das zerlegen einer URL ab und formalisiert diesen Prozess.</p>
+<p>Bitte beantworten Sie die folgenden Fragen:</p>
+<ul>
+<li>Was macht der Query String?</li>
+<li>Wie hilft uns die <em>Handlebars</em> Funktion <code style="font-family: Hack;">{{#each artist}}</code>?</li>
+</ul>
+<h3 id="power-von-sql-abfragen">Power von SQL Abfragen</h3>
+<p>Geben Sie unter <code style="font-family: Hack;">/artists</code>, zusätzlich zum Namen, die Anzahl der Songs aus. Dazu müssen Sie Tabellen verknüpfen, nach Künstler gruppieren und Zählen (<code style="font-family: Hack;">count()</code>). Sie müssen den Code des Routers, abgesehen vom SQL Befehl, nicht verändern; lediglich das Template, um die zusätzliche Information darzustellen.</p>
+<p>Versuchen Sie danach die Liste der Künstler, anstatt alphabetisch, nach der Anzahl der Songs eines Künstlers zu sortieren.</p>
+<h3 id="sqlite3-modul-verstehen">SQLite3 Modul verstehen</h3>
+<p>Geben Sie unter <code style="font-family: Hack;">/artists/songs</code> zusätzlich die Länge der Songs in Minuten und Sekunden aus. Nutzen Sie die Funktion <a href="https://github.com/mapbox/node-sqlite3/wiki/API#databaseeachsql-param--callback-complete">Database#each</a>. Sie müssen die SQL Anfrage ändern und den Wert der Songlänge formatieren. <em>Der Modulus Operator <code style="font-family: Hack;">%</code> und <code style="font-family: Hack;">Math</code> können hilfreich sein.</em></p>
+<p>Sie können diese Vorlage verwenden:</p>
+<pre class="editor-colors lang-javascript"><div class="line"><span class="source js"><span class="storage modifier js"><span>var</span></span><span>&nbsp;songs&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span><span>]</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>db</span><span class="meta delimiter method period js"><span>.</span></span><span>each</span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>SELECT&nbsp;&lt;...&gt;</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;req</span><span class="meta delimiter method period js"><span>.</span></span><span>query</span><span class="meta delimiter method period js"><span>.</span></span><span>artist</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="punctuation definition parameters begin js"><span>(</span></span><span class="variable parameter function js"><span>err</span></span><span class="meta object delimiter js"><span>,</span></span><span class="variable parameter function js"><span>row</span></span><span class="punctuation definition parameters end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span class="punctuation whitespace comment leading js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>Diese&nbsp;Zeile&nbsp;wird&nbsp;für&nbsp;jede&nbsp;Zeile&nbsp;des&nbsp;Ergebnis&nbsp;aufgerufen</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span class="punctuation whitespace comment leading js"><span>&nbsp;&nbsp;</span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>Hier&nbsp;können&nbsp;Sie&nbsp;die&nbsp;Daten&nbsp;verarbeiten</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;songs</span><span class="meta delimiter method period js"><span>.</span></span><span class="support function js"><span>push</span></span><span class="meta brace round js"><span>(</span></span><span>row</span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="punctuation definition parameters begin js"><span>(</span></span><span class="variable parameter function js"><span>err</span></span><span class="meta object delimiter js"><span>,</span></span><span>&nbsp;</span><span class="variable parameter function js"><span>NumberOfRows</span></span><span class="punctuation definition parameters end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="keyword control js"><span>if</span></span><span>&nbsp;</span><span class="meta brace round js"><span>(</span></span><span>err</span><span class="meta brace round js"><span>)</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;res</span><span class="meta delimiter method period js"><span>.</span></span><span class="support constant js"><span>status</span></span><span class="meta brace round js"><span>(</span></span><span>err</span><span class="meta delimiter method period js"><span>.</span></span><span class="support constant js"><span>status</span></span><span>&nbsp;</span><span class="keyword operator js"><span>||</span></span><span>&nbsp;</span><span class="constant numeric js"><span>500</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;res</span><span class="meta delimiter method period js"><span>.</span></span><span>render</span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>error</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;err</span><span class="meta delimiter method period js"><span>.</span></span><span>message</span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;err</span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span>&nbsp;</span><span class="keyword control js"><span>else</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;res</span><span class="meta delimiter method period js"><span>.</span></span><span>render</span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>songs</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span><span>&nbsp;artist</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;artist</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;songs</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;songs&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div></pre>
+<h2 id="teil-5-ihre-projekt-datenbank-ab-2-12-2015-">Teil 5: Ihre Projekt-Datenbank (ab 2.12.2015)</h2>
+<p><em>Zu diesem Teil gehört ein Datenbank-Schema, das wir am 2.12.2015 gemeinsam entwickeln. Sie können die Datenbank-Datei ab diesem Zeitpunkt aus dem Moodle herunterladen.</em></p>
+<p>Diese Aufgaben beziehen sich auf den Ordner <code style="font-family: Hack;">Teil 5 - Projekt-Datenbank</code>.</p>
+<p>Bitte wechseln Sie im Terminal in diesen Ordner und führen Sie <code style="font-family: Hack;">npm install</code> aus um die Dependencies auf Ihren Computer zu installieren.</p>
+<p>Starten Sie den Webserver:</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>Mac</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span>$&nbsp;DEBUG=myMusicApp:</span><span class="keyword operator glob shell"><span>*</span></span><span>&nbsp;npm&nbsp;start</span></span></div><div class="line"><span class="source shell"><span>&nbsp;</span></span></div><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>Windows</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source shell"><span class="keyword operator redirect shell"><span>&gt;</span></span><span>&nbsp;</span><span class="support function builtin shell"><span>set</span></span><span>&nbsp;DEBUG=myapp:</span><span class="keyword operator glob shell"><span>*</span></span><span>&nbsp;</span><span class="keyword operator list shell"><span>&amp;</span></span><span>&nbsp;npm&nbsp;start</span></span></div></pre>
+<p>Der Webserver muss bei Code-Änderungen neu gestartet werden!</p>
+<p>Ihr Webserver läuft wieder unter dieser Adresse: <a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></p>
+<h3 id="ziel">Ziel</h3>
+<p>Der Praktikums-Marathon 2015 neigt sich dem Ende. Wir haben Ihnen die Grundlagen vieler Technologien angeboten, unter Anderem haben wir uns mit HTML, CSS, JavaScript, Templates und SQL beschäfigt. In dieser letzten Aufgabe wird alles zusammen fließen.</p>
+<p>In unserem ersten Praktikum haben Sie eine lose Sammlung von HTML-Seiten erstellt. Das übergeordnete Thema war eine Portfolio-Website. Dieses Thema greifen wir hier wieder auf und fügen die Puzzle-Teile zusammen. Sie können hierfür Teile aus vorangegangenen Praktika wieder verwenden. Weiterhin lohnt sich ein genauerer Blick in die Musik-Datenbank aus Teil 4 - hier kann man große Teile der Datenbank und des Routings klauen.</p>
+<h3 id="aufgabe">Aufgabe</h3>
+<p>Nehmen Sie Ihre Portfolio-Website aus dem ersten Praktikum und lassen Sie sie auf Node/Express basieren.</p>
+<ul>
+<li>Fügen Sie mit dem SQLite-Browser ein paar Projekte in die Datenbank ein (es dürfen auch Unsinns-Projekte sein)</li>
+<li>Kopieren Sie Ihre CSS Dateien in den <code style="font-family: Hack;">public</code>-Ordner</li>
+<li>Passen Sie die Datei <code style="font-family: Hack;">views/layout.hbs</code> an, dies ist der allgemeine Rahmen für alle Seiten in Express.js. Hier sollte zum Beispiel Ihr CSS eingebunden werden.</li>
+<li>Erstellen Sie Routen für &#39;About&#39;, &#39;Projekte&#39; und &#39;Impressum&#39; an.</li>
+<li>Erstellen Sie eine Route, welche einzelnen Projekte anzeigen kann.</li>
+<li>Fügen Sie die Inhalte von About und Impressum in Templates ein.</li>
+<li>Die Projekte sollen aus der Datenbank ausgelesen werden, orientieren Sie sich hierbei an der Musik-Datenbank aus Teil 4. Hierzu ist eine Route und ein Template notwendig.</li>
+<li>Verlinken Sie die Seiten aus einer allgemeinen Navigation (diese kann z.B. ebenfalls in <code style="font-family: Hack;">views/layout.hbs</code> enthalten sein).</li>
+</ul>
+<h3 id="k-r">Kür</h3>
+<p>Selbstverständlich dürfen Sie über den beschriebenen Stand hinaus gehen. Hier sind einige Anregungen, aber Sie dürfen gerne eigene Ideen verwirklichen.</p>
+<ul>
+<li>Projekt-Suche</li>
+<li>JavaScript-Bildergalerie für Projekte</li>
+<li>Ausgefuchsteres CSS</li>
+<li>Weitere statische oder dynamische Seiten</li>
+<li>Projekt-Teilnehmer oder Stichwörter könnten eigene Dynamische Seiten bekommen</li>
+<li>Beschaffen Sie sich Webspace und hosten Sie Ihre eigene Website</li>
+</ul></body>
+</html>

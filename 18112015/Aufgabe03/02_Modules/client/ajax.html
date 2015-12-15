@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Anfrage</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-git2.min.js"></script>
+    <script type="text/javascript" src="./ajax.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
+</head>
+<body>
+  <h1>Aktuelle Uhrzeit</h1>
+  <button id="getTime">Aktualisiere Uhrzeit:</button>
+  <p>Es ist gerade: <span id="result"></span></p>
+
+  <script type="text/javascript">
+      $('#getTime').click(function() {
+        $.get( "http://127.0.0.1:1337", function( data ) { //Adresse der Anfrage und die Callback-Funktion, die bei Erfolg ausgeführt wird
+        
+        data = moment().format("MM/DD/YYYY");
+        $( "#result" ).html( data ); // Fügt dem HTML Element der Klasse 'result' den Inhalt der Antwort hinzu
+
+        console.log( "Load was performed." );
+        });
+      });
+  </script>
+</body>
+</html>

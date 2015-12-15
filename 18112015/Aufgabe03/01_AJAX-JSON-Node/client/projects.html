@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projekte per AJAX+JSON laden</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-git2.min.js"></script>
+    <script id="main" type="text/javascript" src="./projects.js"></script>
+</head>
+<body>
+    <h1>Mein Portfolio</h1>
+    <button id="loadProjects">Lade Projekte</button>
+    <div id="projects">
+        <!-- Hier sollen Ihre Projekte erscheinen -->
+    </div>
+    <script type="text/javascript">
+      $('#loadProjects').click(getProjects);
+    </script>
+</body>
+</html>

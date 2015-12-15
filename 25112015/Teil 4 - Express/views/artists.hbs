@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<h4>Momentane Anzahl der Künstler: {{tracks}}</h4>
+{{#each artists}}
+<div>
+    <h4>{{name}}</h4>
+    <p>Zu den <a href="/artists/songs?artist={{id}}"> Songs von {{name}}</a>.</p>
+</div>
+{{/each}}

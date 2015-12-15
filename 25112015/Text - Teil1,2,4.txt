@@ -1,0 +1,49 @@
+--Teil 1:
+
+SELECT artist, title, year FROM songs;
+SELECT * FROM songs ORDER BY song_length;
+SELECT * FROM songs WHERE file_length < 500000;
+SELECT * FROM songs WHERE title = 'Hello' AND artist = 'Sugarbomb';
+SELECT * FROM songs WHERE title LIKE '%blubber%';
+
+SELECT artist,
+	avg(song_length) as tracks,
+	sum(song_length) as length
+FROM songs
+GROUP BY artist
+ORDER BY length desc;
+
+_______________________________________________________________
+--Teil 2:
+
+SELECT album, songs.artist, title
+FROM albums, songs
+WHERE albums.ID = songs.album_id
+	AND album LIKE '%live%';
+
+SELECT *
+FROM genres_songs, genres, songs
+WHERE genres_songs.genre_id = genres.ID
+	AND genres.genre_name = 'Brit Rock';
+
+INSERT INTO songs (artist, title) VALUES ('Blub', 'Geblubber');
+INSERT INTO songs (artist, title) VALUES ('SecondBlub', 'UltimateGebluber');
+INSERT INTO songs (artist, title, song_length) VALUES ('FinalBlubber', 'Now we're gonna blub it', 126);
+
+
+____________________________________________________________________
+--Teil 4:
+-Datenbank:
+
+Was macht der Query String?
+Der Query String ist die ID, die verantwortlich ist welcher Artist angezeigt wird.
+(Line 58 in /routes/artist.js)
+
+Wie hilft uns die Handlebars Funktion {{#each artist}}?
+Die Funktion iteriert eine Liste, was praktisch ist wenn man mit Datenbanken arbeitet.
+
+
+
+
+
+

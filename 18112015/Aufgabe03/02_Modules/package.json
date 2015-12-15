@@ -1,0 +1,22 @@
+{
+  "name": "modules-practical",
+  "version": "1.0.0",
+  "description": "Übungen mit Beispielen zu Modulen in JS und Node",
+  "main": "base.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "practical",
+    "tutorial",
+    "h-da",
+    "imd",
+    "modules",
+    "npm"
+  ],
+  "author": "Felix Epp",
+  "license": "ISC",
+  "dependencies": {
+    "random-js": "^1.0.8"
+  }
+}
